@@ -16,7 +16,8 @@ const Layout = ({
   children,
   title,
   description,
-  socialImage = ''
+  socialImage = '',
+  noIndex
 }: Props) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage || author.photo;
@@ -27,6 +28,7 @@ const Layout = ({
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
+        {noIndex ? <meta name="robots" content="noindex, nofollow"/> : null}
         <meta name="description" content={description} />
         <meta property="og:site_name" content={title} />
         <meta property="og:image" content={metaImageUrl} />
