@@ -10,6 +10,7 @@ module.exports = {
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
+  darkFunctionalityIsOn: true,
   menu: [
     {
       label: 'Articles',

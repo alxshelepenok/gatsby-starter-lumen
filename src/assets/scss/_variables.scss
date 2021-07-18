@@ -3,15 +3,19 @@
  */
 @use "sass:math";
 
+
 // Colors
-$color-base: #222;
-$color-primary: #5D93FF;
-$color-secondary: #F7A046;
+$color-background: var(--color-background, #fff);
+$color-base: var(--color-base, #222);
+$color-primary: var(--color-primary, #5D93FF);
+$color-secondary: var(--color-secondary, #f7a046);
 
 $color-white: #FFF;
-$color-gray: lighten($color-base, 40%);
-$color-gray-border: lighten($color-base, 77%);
-$color-gray-bg: lighten($color-base, 79%);
+$color-gray:  #888;
+$color-gray-18: #2e2e2e;
+$color-gray-20: #333333;
+$color-gray-border: #e6e6e6;
+$color-gray-bg: #ebebeb;
 
 // Typographic
 $typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;

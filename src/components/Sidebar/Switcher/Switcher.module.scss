@@ -1,0 +1,55 @@
+@import '../../../../src/assets/scss/mixins';
+@import '../../../assets/scss/variables';
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+
+    &__text {
+        margin-right: 10px;
+    }
+
+    &__container {
+        display: flex;
+    }
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    border: solid 1px $color-base;
+    background-color: $color-background;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: $color-base;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: $color-background;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
