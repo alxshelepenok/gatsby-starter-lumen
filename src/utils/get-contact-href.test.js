@@ -18,4 +18,5 @@ test('getContactHref', () => {
   expect(getContactHref('youtube', '#')).toBe('https://www.youtube.com/channel/#');
   expect(getContactHref('soundcloud', '#')).toBe('https://soundcloud.com/#');
   expect(getContactHref('medium', '#')).toBe('https://medium.com/#');
+  expect(getContactHref('kaggle', '#')).toBe('https://www.kaggle.com/#');
 });

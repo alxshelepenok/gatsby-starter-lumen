@@ -28,6 +28,7 @@ const useSiteMetadata = () => {
                 youtube
                 soundcloud
                 medium
+                kaggle
               }
             }
             menu {

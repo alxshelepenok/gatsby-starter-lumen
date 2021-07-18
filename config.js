@@ -45,6 +45,7 @@ module.exports = {
       youtube: '',
       soundcloud: '',
       medium: '',
+      kaggle: ''
     }
   }
 };
