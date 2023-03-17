@@ -11,20 +11,16 @@ interface CategoriesQueryResult {
 
 const useCategoriesList = () => {
   const { allMarkdownRemark } = useStaticQuery<CategoriesQueryResult>(
-    graphql`
-      query CategoriesListQuery {
-        allMarkdownRemark(
-          filter: {
-            frontmatter: { template: { eq: "post" }, draft: { ne: true } }
-          }
-        ) {
-          group(field: frontmatter___category) {
-            fieldValue
-            totalCount
-          }
-        }
-      }
-    `,
+    graphql`query CategoriesListQuery {
+  allMarkdownRemark(
+    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+  ) {
+    group(field: {frontmatter: {category: SELECT}}) {
+      fieldValue
+      totalCount
+    }
+  }
+}`,
   );
 
   return allMarkdownRemark.group ?? [];

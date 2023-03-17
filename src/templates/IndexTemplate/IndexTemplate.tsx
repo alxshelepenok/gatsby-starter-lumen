@@ -40,32 +40,30 @@ const IndexTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
   );
 };
 
-export const query = graphql`
-  query IndexTemplate($limit: Int!, $offset: Int!) {
-    allMarkdownRemark(
-      limit: $limit
-      skip: $offset
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-    ) {
-      edges {
-        node {
-          fields {
-            categorySlug
-            slug
-          }
-          frontmatter {
-            description
-            category
-            title
-            date
-            slug
-          }
+export const query = graphql`query IndexTemplate($limit: Int!, $offset: Int!) {
+  allMarkdownRemark(
+    limit: $limit
+    skip: $offset
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+  ) {
+    edges {
+      node {
+        fields {
+          categorySlug
+          slug
+        }
+        frontmatter {
+          description
+          category
+          title
+          date
+          slug
         }
       }
     }
   }
-`;
+}`;
 
 export const Head: React.FC<Props> = ({ pageContext }) => {
   const { title, subtitle } = useSiteMetadata();
