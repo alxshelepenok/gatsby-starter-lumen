@@ -29,7 +29,7 @@
     "semantic-release": "semantic-release",
     "serve": "gatsby serve",
     "start": "npm run clean && gatsby develop",
-    "test": "jest --config ./internal/testing/jest-config.ts",
+    "test": "TZ=UTC jest --config ./internal/testing/jest-config.ts",
     "test:coverage": "jest --coverage --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts"
