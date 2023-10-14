@@ -76,7 +76,6 @@
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.25.0",
-    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -136,7 +135,6 @@
     "rimraf": "5.0.5",
     "sass": "^1.65.1",
     "semantic-release": "^21.0.9",
-    "source-map-support": "^0.5.21",
     "stylelint": "^15.10.3",
     "stylelint-config-recommended-scss": "^13.0.0",
     "stylelint-order": "^6.0.3",
