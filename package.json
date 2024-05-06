@@ -105,7 +105,7 @@
     "browserslist": "^4.23.0",
     "codecov": "^3.8.3",
     "concurrently": "^8.2.2",
-    "conventional-changelog-conventionalcommits": "7.0.2",
+    "conventional-changelog-conventionalcommits": "8.0.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
