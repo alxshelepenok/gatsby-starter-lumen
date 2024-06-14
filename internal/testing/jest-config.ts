@@ -27,6 +27,7 @@ const jestConfig: Config.InitialOptions = {
     ],
   },
   transform: { "^.+\\.[jt]sx?$": ["@swc/jest", swc] },
+  globalSetup: "<rootDir>/internal/testing/jest-global.ts",
   setupFiles: ["<rootDir>/internal/testing/jest-setup.ts"],
   setupFilesAfterEnv: ["<rootDir>/internal/testing/jest-after-env.ts"],
   testPathIgnorePatterns: ["node_modules", "\\.cache", "<rootDir>.*/public"],
